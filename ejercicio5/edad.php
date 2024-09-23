@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edades</title>
     <link rel="stylesheet" href="../EjerciciosPHP.css">
 </head>
 
@@ -12,7 +12,7 @@
     <div>
         <?php
         $edad = $_GET['edad'];
-        if ($edad >=0 && $edad < 12) {
+        if ($edad >= 0 && $edad < 12) {
             echo "<p>Infante</p>";
         } else if ($edad >= 12 && $edad <= 17) {
             echo "<p>Adolescente</p>";
