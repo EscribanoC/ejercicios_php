@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de compra</title>
+    <link rel="stylesheet" href="../EjerciciosPHP.css">
+</head>
+<body>
+    <div>
+        <form action="lista.php" method="get">
+            <label for="articulo">Artículo:</label>
+            <input type="text" id="articulo">
+            <input type="button" onclick="anadirArticulo()" value="Añadir artículo">
+            <input type="text" id="listaCompra" name="listaCompra" hidden>
+            <input type="submit" value="Finalizar compra">
+        </form>
+        
+    </div>
+    <script>
+        function anadirArticulo(){
+            let articulo = document.getElementById("articulo").value;
+            document.getElementById("articulo").value = "";
+            document.getElementById("listaCompra").value += articulo + ":";
+        }
+    </script>
+</body>
+</html>
