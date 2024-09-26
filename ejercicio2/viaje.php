@@ -13,9 +13,17 @@
         <?php
         $velocidad = $_POST['velocidad'];
         $distancia = $_POST['distancia'];
-        echo "El tiempo del viaje será de " . $distancia / $velocidad . " horas.";
+
+        if (isset($velocidad) && isset($distancia)){
+            if(is_numeric($velocidad)&& is_numeric($distancia)){
+                echo "El tiempo del viaje será de " . $distancia / $velocidad . " horas.";
+            } else{
+                echo "Lo introducido no es un número.";
+            }
+        }
         ?>
-    </div>
+        <br>
+        <a href="viaje.html">Volver atrás</a>
 </body>
 
 </html>
